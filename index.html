@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jaladhi Patel - Flutter Developer with 4+ years of experience in mobile application development">
+    <meta name="author" content="Jaladhi Patel">
+    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, iOS, Android, Jaladhi Patel">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Jaladhi Patel - Flutter Developer">
+    <meta property="og:description"
+        content="Flutter Developer with 4+ years of experience building exceptional mobile applications">
+    <meta property="og:type" content="website">
+
+    <title>Jaladhi Patel - Flutter Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">JP</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/jd-patel" target="_blank" rel="noopener" class="nav-icon"
+                    aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Jaladhi Patel</h1>
+                <h2 class="hero-title">Flutter Developer</h2>
+                <p class="hero-location">📍 Surat, Gujarat, India</p>
+                <p class="hero-description">
+                    4+ years of experience in designing, developing, and maintaining mobile applications.
+                    Skilled in writing clean, efficient code and delivering seamless user experiences.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-device-container">
+                    <!-- iPhone Outline in Background -->
+                    <svg class="iphone-outline-bg" viewBox="0 0 280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main Phone Body -->
+                        <rect x="5" y="5" width="270" height="550" rx="50" stroke="url(#gradient)" stroke-width="1.5"
+                            class="phone-frame" />
+                        <!-- Dynamic Island / Notch -->
+                        <rect x="110" y="15" width="60" height="25" rx="12.5" fill="none" stroke="url(#gradient)"
+                            stroke-width="1.5" class="phone-notch" />
+                        <!-- Gradient Definition -->
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#5865f2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Code Editor in Foreground -->
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <div class="editor-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="editor-title">main.dart</span>
+                        </div>
+                        <div class="editor-content">
+                            <pre><code><span class="code-keyword">class</span> <span class="code-class">FlutterDeveloper</span> {
+  <span class="code-keyword">final</span> <span class="code-type">String</span> name = <span class="code-string">'Jaladhi Patel'</span>;
+  <span class="code-keyword">final</span> <span class="code-type">int</span> experience = <span class="code-number">4</span>;
+  <span class="code-keyword">final</span> <span class="code-type">List</span>&lt;<span class="code-type">String</span>&gt; skills = [
+    <span class="code-string">'Flutter'</span>,
+    <span class="code-string">'Dart'</span>,
+    <span class="code-string">'Riverpod'</span>,
+    <span class="code-string">'BLoC'</span>,
+    <span class="code-string">'Firebase'</span>,
+  ];
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p class="about-intro">
+                        Mobile Application Developer with <strong>4+ years of experience</strong> in Flutter and React
+                        Native,
+                        specializing in building scalable, high-quality applications with clean architecture and
+                        seamless user experiences.
+                    </p>
+                    <p class="about-description">
+                        Skilled in integrating codebases, integrating AI-driven features, and optimizing app
+                        performance.
+                        Proficient in Firebase integration, API development, and cross-platform development.
+                        I enjoy staying current with emerging technologies and collaborating with product and design
+                        teams
+                        to deliver impactful digital solutions.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">4+</span>
+                            <span class="highlight-label">Years Experience</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">10+</span>
+                            <span class="highlight-label">Projects Delivered</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">100K+</span>
+                            <span class="highlight-label">App Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+
+            <div class="skills-category fade-in">
+                <h3 class="category-title">Flutter & Core Technologies</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">Riverpod</span>
+                    <span class="skill-tag">BLoC</span>
+                    <span class="skill-tag">Animations</span>
+                    <span class="skill-tag">Localization</span>
+                    <span class="skill-tag">Responsive UI</span>
+                    <span class="skill-tag">http/dio</span>
+                    <span class="skill-tag">Material UI 3</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Firebase Crashlytics</span>
+                    <span class="skill-tag">Push Notification</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Android App</span>
+                    <span class="skill-tag">iOS App</span>
+                </div>
+            </div>
+
+            <div class="skills-category fade-in">
+                <h3 class="category-title">Third Party Integrations</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Sentry</span>
+                    <span class="skill-tag">Amplitude Event Tracking</span>
+                    <span class="skill-tag">Google Ads</span>
+                    <span class="skill-tag">Biometric/FaceID</span>
+                    <span class="skill-tag">Stepcounter/Pedometer</span>
+                    <span class="skill-tag">POS/Invoice Printing</span>
+                    <span class="skill-tag">Video Call (100ms)</span>
+                    <span class="skill-tag">Zoom SDK</span>
+                    <span class="skill-tag">Agora</span>
+                    <span class="skill-tag">Phrase Localization</span>
+                    <span class="skill-tag">Google Health Connect</span>
+                </div>
+            </div>
+
+            <div class="skills-category fade-in">
+                <h3 class="category-title">Version Control & Tools</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">GitLab</span>
+                    <span class="skill-tag">BitBucket</span>
+                    <span class="skill-tag">Jira</span>
+                    <span class="skill-tag">Linear</span>
+                    <span class="skill-tag">ZOHO</span>
+                    <span class="skill-tag">Clickup</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">AdobeXD</span>
+                </div>
+            </div>
+
+            <div class="skills-category fade-in">
+                <h3 class="category-title">Additional Technologies</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Flutter Web</span>
+                    <span class="skill-tag">Flutter Desktop</span>
+                    <span class="skill-tag">ReactJS</span>
+                    <span class="skill-tag">GoLang</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Mobile Developer</h3>
+                            <span class="timeline-company">EngagelyAI</span>
+                        </div>
+                        <p class="timeline-period">October 2025 – Present</p>
+                        <p class="timeline-location">Mumbai, Maharashtra</p>
+                        <p class="timeline-description">
+                            Working as a Flutter Developer, focusing on building and improving mobile app solutions
+                            while staying updated with the latest Flutter advancements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Flutter Developer</h3>
+                            <span class="timeline-company">Paiteq Private Limited</span>
+                        </div>
+                        <p class="timeline-period">April 2024 – April 2025</p>
+                        <p class="timeline-location">Bangalore, Karnataka</p>
+                        <p class="timeline-description">
+                            Maintained and enhanced mobile applications by fixing bugs, improving performance, and
+                            adding new features.
+                            Collaborated with product and design teams to ensure smooth, up-to-date, and user-friendly
+                            experiences.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Flutter Developer</h3>
+                            <span class="timeline-company">Ebizz Infotech</span>
+                        </div>
+                        <p class="timeline-period">August 2021 – March 2024</p>
+                        <p class="timeline-location">Surat, Gujarat</p>
+                        <p class="timeline-description">
+                            Worked on multiple mobile applications across wellness, fitness, finance, and enterprise
+                            domains,
+                            utilizing a variety of technologies and third-party packages. Focused on delivering seamless
+                            user experiences,
+                            implementing core functionalities, and maintaining app performance and stability across
+                            projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Superbrains -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Superbrains</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">A mental and physical health fitness app</p>
+                    <ul class="project-features">
+                        <li>Developed audio/video calling integration</li>
+                        <li>Google Fit & Apple Health Connect integration</li>
+                        <li>App maintenance and performance optimization</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Video Call</span>
+                        <span class="tech-tag">Health Connect</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 2: OneBreath -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">OneBreath</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">Mental Wellness and Stress Relief App</p>
+                    <ul class="project-features">
+                        <li>Breathing and stress test assessments</li>
+                        <li>Tailored breath exercises</li>
+                        <li>Guided video/audio content with multilingual support</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Animations</span>
+                        <span class="tech-tag">Localization</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 3: EEA Group -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">EEA Group</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">Construction Equipment Support App</p>
+                    <ul class="project-features">
+                        <li>Machinery maintenance management</li>
+                        <li>Order parts through dynamic forms</li>
+                        <li>Service scheduling with admin communication</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dynamic Forms</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 4: Mindscape -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Mindscape</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">Mind Therapy and Wellness App</p>
+                    <ul class="project-features">
+                        <li>Holistic healing service booking</li>
+                        <li>Agora platform for immersive sessions</li>
+                        <li>Localization with LTR/RTL support</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Agora</span>
+                        <span class="tech-tag">Localization</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 5: Vedic Trivia -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Vedic Trivia</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">A Quiz Application</p>
+                    <ul class="project-features">
+                        <li>Interactive quiz challenges</li>
+                        <li>Google Ads integration</li>
+                        <li>Engaging user experience</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Google Ads</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 6: Mandobk Store -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Mandobk Store</h3>
+                        <span class="project-badge">Live</span>
+                    </div>
+                    <p class="project-description">A Restaurant Management App</p>
+                    <ul class="project-features">
+                        <li>POS and invoice printing</li>
+                        <li>Google Maps delivery tracking</li>
+                        <li>LTR/RTL language support</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">POS</span>
+                        <span class="tech-tag">Google Maps</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 7: Loackr Pay -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Loackr Pay</h3>
+                    </div>
+                    <p class="project-description">Finance App with Biometric Authentication</p>
+                    <ul class="project-features">
+                        <li>Seamless financial management</li>
+                        <li>Biometric & FaceID authentication</li>
+                        <li>Secure transactions</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Biometric</span>
+                        <span class="tech-tag">FaceID</span>
+                    </div>
+                </div>
+
+                <!-- Project 8: Center Of Strength -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Center Of Strength</h3>
+                    </div>
+                    <p class="project-description">Physical Fitness Gym App</p>
+                    <ul class="project-features">
+                        <li>Step counter for progress tracking</li>
+                        <li>Exercise video library</li>
+                        <li>Personalized diet plans</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Pedometer</span>
+                        <span class="tech-tag">Video</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">Education</h2>
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <div class="education-icon">🎓</div>
+                    <h3 class="education-degree">B. Tech in Information Technology</h3>
+                    <p class="education-institution">Birla Vishvakarma Mahavidyalaya</p>
+                    <p class="education-location">V.V.Nagar, Anand, Gujarat</p>
+                    <p class="education-period">2016 – 2019</p>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">📚</div>
+                    <h3 class="education-degree">Diploma Engineering in IT</h3>
+                    <p class="education-institution">Parul Polytechnic Institute</p>
+                    <p class="education-location">Vadodara, Gujarat</p>
+                    <p class="education-period">2012 – 2016</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Connect</h2>
+            <p class="contact-intro fade-in">
+                I'm currently open to new opportunities. Whether you have a question or just want to say hi,
+                I'll try my best to get back to you!
+            </p>
+            <div class="contact-info fade-in">
+                <a href="mailto:jaladhi.dev@gmail.com" class="contact-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <span>jaladhi.dev@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jd-patel" target="_blank" rel="noopener" class="contact-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <a href="mailto:jaladhi.dev@gmail.com" class="btn btn-primary fade-in" style="margin-top: 2rem;">Say
+                Hello</a>
+        </div>
+    </section>
+
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

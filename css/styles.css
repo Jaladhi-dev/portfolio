@@ -1612,12 +1612,31 @@ a:hover {
 
   .hero-visual {
     order: 1;
-    max-width: 500px;
-    margin: 0 auto 3rem;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-device-container {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transform: scale(0.8);
+  }
+
+  .code-editor {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .iphone-outline-bg {
+    width: 220px;
+    height: 440px;
+    right: -30px;
   }
 
   .hero-description {
     margin: 0 auto var(--spacing-lg);
+    max-width: 600px;
   }
 
   .hero-cta {
@@ -1695,6 +1714,36 @@ a:hover {
     min-height: auto;
     padding-top: 100px;
     padding-bottom: var(--spacing-xl);
+  }
+
+  .hero .container {
+    gap: var(--spacing-md);
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-greeting {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-name {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-base);
+    max-width: 100%;
   }
 
   .hero-cta {

@@ -652,6 +652,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  background-origin: border-box;
 }
 
 .btn::before {
@@ -681,6 +682,7 @@ a:hover {
   background: var(--accent-gradient);
   color: var(--bg-primary);
   box-shadow: var(--shadow-glow);
+  border: none;
 }
 
 .btn-primary:hover {
@@ -810,6 +812,13 @@ a:hover {
   transition: all var(--transition-smooth);
   cursor: default;
   animation: fadeInScale 0.4s ease both;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-tag i {
+  font-size: 1.1em;
 }
 
 .skill-tag:hover {
@@ -1662,9 +1671,14 @@ a:hover {
   }
 
   /* Navigation */
+  .nav-icons {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
   .nav-menu {
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background-color: var(--bg-primary);
@@ -1672,6 +1686,7 @@ a:hover {
     flex-direction: column;
     gap: 0;
     padding: 1rem 0;
+    text-align: center;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
@@ -1685,6 +1700,7 @@ a:hover {
   }
 
   .nav-link {
+    display: block;
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--border-color);
   }
@@ -1711,9 +1727,13 @@ a:hover {
 
   /* Hero */
   .hero {
-    min-height: auto;
-    padding-top: 100px;
-    padding-bottom: var(--spacing-xl);
+    min-height: 100svh;
+    height: 100svh;
+    padding-top: 80px;
+    padding-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero .container {
@@ -1847,6 +1867,8 @@ body {
 
   .nav-icons {
     gap: 0.5rem;
+    margin-left: auto;
+    margin-right: 1rem;
   }
 
   .theme-toggle,

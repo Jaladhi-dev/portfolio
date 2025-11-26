@@ -222,6 +222,18 @@ a:hover {
   padding: 1rem 0;
 }
 
+[data-theme="dark"] .skill-card img[src*="nextjs"],
+[data-theme="dark"] .skill-card img[src*="socketio"],
+[data-theme="dark"] .skill-card img[src*="github"] {
+  filter: brightness(0) invert(1);
+}
+
+/* Fix for Devicon font icons in dark mode */
+[data-theme="dark"] .devicon-github-original.colored,
+[data-theme="dark"] .devicon-apple-original.colored {
+  color: #ffffff !important;
+}
+
 [data-theme="light"] .navbar {
   background-color: var(--navbar-bg);
 }

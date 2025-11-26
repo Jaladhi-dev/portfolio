@@ -18,6 +18,7 @@
   --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #5865f2 100%);
   --border-color: #252525;
   --border-accent: #333333;
+  --grid-color: rgba(255, 255, 255, 0.03);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -58,6 +59,12 @@
   /* Container */
   --container-max-width: 1200px;
   --container-padding: 2rem;
+
+  /* Navbar */
+  --navbar-bg: rgba(10, 10, 10, 0.3);
+  --navbar-bg-scrolled: rgba(10, 10, 10, 0.8);
+  --navbar-blur: 16px;
+  --navbar-shadow: none;
 }
 
 /* Light Theme */
@@ -75,6 +82,11 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
   --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.2);
+  --grid-color: rgba(0, 0, 0, 0.03);
+
+  /* Navbar Light */
+  --navbar-bg: rgba(255, 255, 255, 0.3);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.8);
 }
 
 /* ===============================================
@@ -196,15 +208,26 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(var(--navbar-blur));
+  -webkit-backdrop-filter: blur(var(--navbar-blur));
+  border-bottom: none;
   padding: 1.25rem 0;
   transition: all var(--transition-smooth);
 }
 
+.navbar.scrolled {
+  background-color: var(--navbar-bg-scrolled);
+  box-shadow: var(--navbar-shadow);
+  padding: 1rem 0;
+}
+
 [data-theme="light"] .navbar {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--navbar-bg);
+}
+
+[data-theme="light"] .navbar.scrolled {
+  background-color: var(--navbar-bg-scrolled);
 }
 
 .nav-container {
@@ -1702,11 +1725,13 @@ a:hover {
   .nav-link {
     display: block;
     padding: 1rem 2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   .nav-link::after {
-    display: none;
+    display: block;
   }
 
   .hamburger {
@@ -1842,10 +1867,12 @@ a:hover {
 
 /* Global background pattern */
 body {
-  background: var(--bg-primary);
-  background-image: radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.05) 1px, transparent 0),
-    radial-gradient(circle at 40px 40px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-  background-size: 80px 80px;
+  background-color: var(--bg-primary);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
 }
 
 @media (max-width: 480px) {

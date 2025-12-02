@@ -725,24 +725,27 @@ a:hover {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero {
-    min-height: 0;
+    min-height: auto;
     height: auto;
-    padding-top: 90px;
+    padding-top: 100px;
     padding-bottom: 40px;
     align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hero .container {
     min-height: 0;
-  }
-
-  .hero-content-centered {
     padding-top: 1rem;
   }
 
+  .hero-content-centered {
+    padding-top: 0;
+    width: 100%;
+  }
+
   .hero-greeting {
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-name {
@@ -752,7 +755,7 @@ a:hover {
 
   .hero-title {
     font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .hero-description {
@@ -762,22 +765,24 @@ a:hover {
   }
 
   .hero-avatar-container {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     margin: 1rem auto 1.5rem;
   }
 
   .hero-cta {
     margin-bottom: 2rem;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-cta .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
   }
 
   .floating-badge {

@@ -397,16 +397,16 @@ a:hover {
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: clamp(80px, 10vh, 150px);
-  padding-bottom: clamp(40px, 8vh, 100px);
+  padding-top: clamp(100px, 12vh, 180px);
+  padding-bottom: clamp(60px, 8vh, 100px);
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* Removed overflow-y: auto to let it scroll with the page */
 }
+
+
 
 .hero::before {
   content: '';
@@ -537,7 +537,7 @@ a:hover {
 }
 
 .hero-name {
-  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
   margin-bottom: var(--spacing-xs);
   background: var(--accent-gradient);
@@ -567,8 +567,8 @@ a:hover {
 /* Avatar & Floating Badges */
 .hero-avatar-container {
   position: relative;
-  width: clamp(200px, min(40vw, 35vh), 500px);
-  height: clamp(200px, min(40vw, 35vh), 500px);
+  width: clamp(280px, min(45vw, 45vh), 600px);
+  height: clamp(280px, min(45vw, 45vh), 600px);
   margin: var(--spacing-md) auto var(--spacing-lg);
   display: flex;
   justify-content: center;
@@ -774,7 +774,8 @@ a:hover {
 
   .hero-image {
     width: 100%;
-    order: 2;
+    order: -1;
+    /* Move avatar to top on mobile */
   }
 
   .hero-greeting {
@@ -799,22 +800,37 @@ a:hover {
   }
 
   .hero-avatar-container {
+    width: clamp(200px, 50vw, 280px);
+    height: clamp(200px, 50vw, 280px);
     margin: 1rem auto 1.5rem;
   }
 
   .hero-cta {
     margin-bottom: 2rem;
-    flex-direction: column;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* Force single line */
+    gap: 0.75rem;
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
     align-items: center;
     justify-content: center;
   }
 
   .hero-cta .btn {
-    width: 100%;
-    max-width: 100%;
+    flex: 1;
+    /* Distribute space equally */
+    width: auto;
+    min-width: 0;
+    /* Allow shrinking if needed */
+    padding: 0.7rem 0.5rem;
+    /* Reduced horizontal padding */
+    font-size: 0.85rem;
+    /* Slightly smaller font */
+    max-width: none;
+    white-space: nowrap;
+    /* Prevent text wrapping */
   }
 
   .floating-badge {
@@ -2008,14 +2024,7 @@ a:hover {
     max-width: 100%;
   }
 
-  .hero-cta {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
 
-  .btn {
-    width: 100%;
-  }
 
   /* About */
   .about-highlights {

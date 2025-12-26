@@ -13,9 +13,9 @@
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --text-muted: #6b6b6b;
-  --accent-primary: #FF5722;
-  --accent-secondary: #304FFE;
-  --accent-gradient: linear-gradient(135deg, #FF5722 0%, #304FFE 100%);
+  --accent-primary: #00d4ff;
+  --accent-secondary: #5865f2;
+  --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #5865f2 100%);
   --border-color: #252525;
   --border-accent: #333333;
   --grid-color: rgba(255, 255, 255, 0.03);
@@ -43,7 +43,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px rgba(255, 87, 34, 0.3);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -81,7 +81,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
-  --shadow-glow: 0 0 20px rgba(255, 87, 34, 0.2);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.2);
   --grid-color: rgba(0, 0, 0, 0.03);
 
   /* Navbar Light */
@@ -403,19 +403,12 @@ a:hover {
   padding-top: clamp(100px, 12vh, 180px);
   padding-bottom: clamp(60px, 8vh, 100px);
   position: relative;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from floating badges */
 }
 
 
-/* Grid Background Pattern */
-.hero {
-  background-color: #0a0a0a;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
 
-/* Clean Grid Background - Subtle Glow Restored */
 .hero::before {
   content: '';
   position: absolute;
@@ -423,22 +416,20 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  /* Very subtle ambient glow */
-  background: radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.06) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 60%);
   animation: pulseGlow 8s ease-in-out infinite alternate;
   pointer-events: none;
-  z-index: 0;
 }
 
 @keyframes pulseGlow {
   0% {
-    opacity: 0.3;
-    transform: scale(0.9);
+    opacity: 0.5;
+    transform: scale(0.8);
   }
 
   100% {
-    opacity: 0.6;
-    transform: scale(1.1);
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 
@@ -450,7 +441,7 @@ a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /* pointer-events: none; */
+  pointer-events: none;
   z-index: 0;
 }
 
@@ -575,7 +566,6 @@ a:hover {
 }
 
 /* Avatar & Floating Badges */
-/* Avatar & Floating Badges */
 .hero-avatar-container {
   position: relative;
   width: clamp(280px, min(45vw, 45vh), 600px);
@@ -589,54 +579,32 @@ a:hover {
   /* Allow badges to float outside but hero will clip */
 }
 
-/* Remove Ring Effect */
-.hero-avatar-container::before {
-  display: none;
-}
-
-/* CSS Custom Property for rotation */
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes spinRing {
-  to {
-    --angle: 360deg;
-  }
-}
-
 .hero-avatar {
-  /* Seamless Blend Mask */
-  -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 70%);
-  mask-image: radial-gradient(circle at center, black 35%, transparent 70%);
-  filter: contrast(1.1) saturate(1.1);
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+  animation: avatarFloat 6s ease-in-out infinite;
   z-index: 2;
-  transform: scale(1);
-  /* Reset scale */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* More visible but concentrated glow */
 .avatar-glow {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: radial-gradient(circle, var(--accent-primary) 20%, transparent 80%);
-  filter: blur(35px);
-  opacity: 0.5;
+  background: var(--accent-gradient);
+  filter: blur(60px);
+  opacity: 0.15;
   border-radius: 50%;
   z-index: 1;
-  top: 10%;
-  left: 10%;
   animation: pulseGlow 4s ease-in-out infinite alternate;
 }
 
 @keyframes avatarFloat {
 
+  0%,
   100% {
     transform: translateY(0);
   }
@@ -646,33 +614,27 @@ a:hover {
   }
 }
 
-/* Floating Badges - Improved Visibility */
+/* Floating Badges */
 .floating-badge {
   position: absolute;
-  background: rgba(30, 30, 30, 0.85);
-  /* Lighter, more visible dark */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  /* Stronger border */
-  padding: 0.6rem 1.1rem;
-  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  z-index: 4;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: max-content;
-  color: rgba(255, 255, 255, 0.95);
-  /* Brighter text base */
+  gap: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: transform 0.3s ease;
 }
 
 .floating-badge:hover {
-  transform: translateY(-3px) scale(1.02);
-  background: rgba(45, 45, 45, 0.95);
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
   border-color: var(--accent-primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 87, 34, 0.2);
 }
 
 .badge-icon {
@@ -688,34 +650,34 @@ a:hover {
   color: var(--text-primary);
 }
 
-/* Optimized Badge Positioning */
+/* Default badge positioning - optimized to stay within container */
 .badge-1 {
-  top: 10%;
-  right: 10%;
+  top: 0%;
+  right: 5%;
   animation: floatBadge1 5s ease-in-out infinite;
 }
 
 .badge-2 {
-  top: 35%;
-  right: -5%;
+  top: 25%;
+  right: -18%;
   animation: floatBadge2 7s ease-in-out infinite 1s;
 }
 
 .badge-3 {
-  bottom: 20%;
-  right: 5%;
+  bottom: 18%;
+  right: -10%;
   animation: floatBadge3 6s ease-in-out infinite 2s;
 }
 
 .badge-4 {
-  bottom: 20%;
-  left: 5%;
+  bottom: 18%;
+  left: -10%;
   animation: floatBadge4 6.5s ease-in-out infinite 1.5s;
 }
 
 .badge-5 {
-  top: 35%;
-  left: -5%;
+  top: 25%;
+  left: -18%;
   animation: floatBadge5 6s ease-in-out infinite 0.5s;
 }
 
@@ -985,7 +947,7 @@ a:hover {
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 0 40px rgba(255, 87, 34, 0.6), 0 0 60px rgba(88, 101, 242, 0.4);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 60px rgba(88, 101, 242, 0.4);
   color: var(--bg-primary);
 }
 
@@ -1265,7 +1227,7 @@ a:hover {
   height: 200%;
   background: linear-gradient(90deg,
       transparent,
-      rgba(255, 87, 34, 0.1),
+      rgba(0, 212, 255, 0.1),
       transparent);
   transform: rotate(45deg);
   opacity: 0;
@@ -1395,7 +1357,7 @@ a:hover {
 .project-link:hover {
   color: var(--accent-primary);
   border-color: var(--accent-primary);
-  background-color: rgba(255, 87, 34, 0.1);
+  background-color: rgba(0, 212, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -1599,7 +1561,7 @@ a:hover {
 
 .scroll-top:hover {
   transform: translateY(-5px) scale(1.15) rotate(360deg);
-  box-shadow: 0 0 40px rgba(255, 87, 34, 0.8);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
 }
 
 .scroll-top:active {

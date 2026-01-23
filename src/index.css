@@ -6,19 +6,19 @@
 /* CSS Variables - Design System with Theme Support */
 :root {
   /* Dark Theme Colors (Default) */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #0f0f0f;
-  --bg-card: #151515;
-  --bg-card-hover: #1a1a1a;
+  --bg-primary: #000000;
+  --bg-secondary: #080808;
+  --bg-card: #0d0d0d;
+  --bg-card-hover: #121212;
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --text-muted: #6b6b6b;
   --accent-primary: #00d4ff;
   --accent-secondary: #5865f2;
   --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #5865f2 100%);
-  --border-color: #252525;
-  --border-accent: #333333;
-  --grid-color: rgba(255, 255, 255, 0.03);
+  --border-color: #1a1a1a;
+  --border-accent: #222222;
+  --grid-color: rgba(255, 255, 255, 0.05);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -107,6 +107,11 @@ html {
 body {
   font-family: var(--font-family);
   background-color: var(--bg-primary);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -1218,36 +1223,14 @@ a:hover {
   pointer-events: none;
 }
 
-.project-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(0, 212, 255, 0.1),
-      transparent);
-  transform: rotate(45deg);
-  opacity: 0;
-  transition: opacity var(--transition-smooth);
-  pointer-events: none;
-}
-
 .project-card:hover::before {
   transform: scaleX(1);
-}
-
-.project-card:hover::after {
-  opacity: 1;
-  animation: shimmer 1.5s ease-in-out;
 }
 
 .project-card:hover {
   border-color: var(--accent-primary);
   transform: translateY(-10px) scale(1.02);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg);
 }
 
 .project-header {

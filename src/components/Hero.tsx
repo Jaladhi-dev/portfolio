@@ -41,7 +41,11 @@ const Hero = () => {
 
                     <div className="hero-image">
                         <div className="hero-avatar-container">
-                            <div className="avatar-glow"></div>
+                            <div className="fog-container">
+                                <div className="fog fog-1"></div>
+                                <div className="fog fog-2"></div>
+                                <div className="fog fog-3"></div>
+                            </div>
                             <img src="images/hero-avatar.png" alt="Jaladhi Patel 3D Avatar" className="hero-avatar" />
 
                             <FloatingBadge className="badge-1" icon="devicon-flutter-plain colored" text="Flutter" />

@@ -590,21 +590,81 @@ a:hover {
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   animation: avatarFloat 6s ease-in-out infinite;
-  z-index: 2;
+  z-index: 3;
+  position: relative;
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
 }
 
-.avatar-glow {
+/* Fog Effect Container */
+.fog-container {
   position: absolute;
-  width: 80%;
-  height: 80%;
-  background: var(--accent-gradient);
-  filter: blur(60px);
-  opacity: 0.05;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  overflow: visible;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Individual Fog Layers */
+.fog {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 400px;
+  height: 150px;
+  background: linear-gradient(to top,
+      rgba(0, 212, 255, 0.4) 0%,
+      rgba(88, 101, 242, 0.3) 30%,
+      rgba(255, 255, 255, 0.2) 60%,
+      transparent 100%);
   border-radius: 50%;
-  z-index: 1;
-  animation: pulseGlow 4s ease-in-out infinite alternate;
+  filter: blur(40px);
+  opacity: 0.8;
+  animation: fogDrift 12s ease-in-out infinite;
+}
+
+.fog-1 {
+  animation-delay: 0s;
+  transform: translateX(-50%);
+}
+
+.fog-2 {
+  animation-delay: 4s;
+  width: 450px;
+  height: 140px;
+  opacity: 0.6;
+  transform: translateX(-50%);
+}
+
+.fog-3 {
+  animation-delay: 8s;
+  width: 380px;
+  height: 160px;
+  opacity: 0.7;
+  transform: translateX(-50%);
+}
+
+@keyframes fogDrift {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-45%) translateY(-5px);
+  }
+
+  50% {
+    transform: translateX(-55%) translateY(0);
+  }
+
+  75% {
+    transform: translateX(-48%) translateY(-3px);
+  }
 }
 
 @keyframes avatarFloat {
@@ -896,7 +956,28 @@ a:hover {
     width: 350px;
     height: 350px;
   }
+
+  /* Reduce fog effect on mobile */
+  .fog {
+    width: 250px;
+    height: 100px;
+    filter: blur(30px);
+    opacity: 0.6;
+  }
+
+  .fog-2 {
+    width: 280px;
+    height: 95px;
+    opacity: 0.5;
+  }
+
+  .fog-3 {
+    width: 240px;
+    height: 105px;
+    opacity: 0.55;
+  }
 }
+
 
 /* ===============================================
    BUTTONS WITH ENHANCED EFFECTS

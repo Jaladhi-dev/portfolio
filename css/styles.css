@@ -449,7 +449,7 @@ a:hover {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.15;
+  opacity: 0;
   animation: floatShape 25s infinite linear;
 }
 
@@ -596,7 +596,7 @@ a:hover {
   height: 80%;
   background: var(--accent-gradient);
   filter: blur(60px);
-  opacity: 0.15;
+  opacity: 0.05;
   border-radius: 50%;
   z-index: 1;
   animation: pulseGlow 4s ease-in-out infinite alternate;

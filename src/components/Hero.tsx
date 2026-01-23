@@ -1,4 +1,5 @@
 import React from 'react';
+import heroAvatar from '../assets/images/hero-avatar.png';
 
 interface FloatingBadgeProps {
     className: string;
@@ -46,7 +47,7 @@ const Hero = () => {
                                 <div className="fog fog-2"></div>
                                 <div className="fog fog-3"></div>
                             </div>
-                            <img src="images/hero-avatar.png" alt="Jaladhi Patel 3D Avatar" className="hero-avatar" />
+                            <img src={heroAvatar} alt="Jaladhi Patel 3D Avatar" className="hero-avatar" />
 
                             <FloatingBadge className="badge-1" icon="devicon-flutter-plain colored" text="Flutter" />
                             <FloatingBadge className="badge-2" emoji="⚡" text="5+ Years" />

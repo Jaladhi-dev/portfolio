@@ -67,7 +67,7 @@ const Projects = () => {
             title: 'Superbrains',
             badge: 'Live',
             description: 'Worked on Superbrains, a mental fitness and brain training app. Responsible for developing new features such as audio/video calling and Google Fit & Apple Health Connect integration.',
-            tech: ['100ms Video/Audio Call', 'Health Connect', 'Flutter-Riverpod'],
+            tech: ['100ms Video/Audio Call', 'Google & Apple Health Connect', 'Riverpod'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/superbrains/id1190092626', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.angrynerds.superbrains&hl=en_IN', icon: 'play' },
@@ -77,7 +77,7 @@ const Projects = () => {
             title: 'OneBreath',
             badge: 'Live',
             description: 'WellnessCare App with breathing and stress tests. Engage in tailored breath exercises and access guided video and audio content.',
-            tech: ['Video/Audio Player', 'Inapp Purchase', 'Flutter-Riverpod'],
+            tech: ['Video/Audio Player', 'InApp Purchase', 'Riverpod'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/onebreath-breathwork-sleep/id6476624695', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=app.onebreath&pcampaignid=web_share', icon: 'play' },
@@ -87,7 +87,7 @@ const Projects = () => {
             title: 'EEA Group',
             badge: 'Live',
             description: 'Streamline machinery maintenance. Easily order parts and schedule services through dynamic forms.',
-            tech: ['Dynamic Forms', 'REST API', 'Flutter-Riverpod'],
+            tech: ['Dynamic Forms', 'REST API', 'Riverpod'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/eeau/id6449926966', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.earthmovingequipment.australia&hl=en', icon: 'play' },
@@ -97,7 +97,7 @@ const Projects = () => {
             title: 'Mindscape',
             badge: 'Live',
             description: 'Therapy and Wellness App with service booking for therapy sessions. Utilizing Agora platform for immersive interactions.',
-            tech: ['Agora Video/Audio Call', 'Localization', 'Flutter-Riverpod'],
+            tech: ['Agora Video/Audio Call', 'Global Appointment System', 'Riverpod'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/mindscape-therapy/id6446362496', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.mindscape.app&hl=en_IN&gl=US', icon: 'play' },
@@ -107,7 +107,7 @@ const Projects = () => {
             title: 'Vedic Trivia',
             badge: 'Live',
             description: 'Interactive Quiz App enhanced with Google Ads for added convenience and support.',
-            tech: ['Google Ads', 'Firebase', 'Flutter-Riverpod'],
+            tech: ['Google Ads', 'Firebase', 'Riverpod'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/vedic-trivia/id6450727764', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.vedictrivia.app&hl=en&gl=US', icon: 'play' },
@@ -117,7 +117,7 @@ const Projects = () => {
             title: 'Mandobk Store',
             badge: 'Live',
             description: 'Comprehensive restaurant management app with POS and invoice printing functionalities. Track delivery drivers via Google Maps.',
-            tech: ['POS', 'Google Maps', 'Flutter-Bloc'],
+            tech: ['POS', 'Google Maps', 'BLoC'],
             links: [
                 { label: 'App Store', url: 'https://apps.apple.com/in/app/mandobk-store/id6444818481', icon: 'apple' },
                 { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.mandobk.restaurantapp&hl=en_IN&gl=US', icon: 'play' },
@@ -126,12 +126,12 @@ const Projects = () => {
         {
             title: 'Loackr Pay',
             description: 'Innovative Finance App featuring cutting-edge biometric authentication including FaceID for secure access.',
-            tech: ['Biometric', 'FaceID', 'Flutter-Riverpod'],
+            tech: ['Biometric', 'FaceID', 'Riverpod'],
         },
         {
             title: 'Center Of Strength',
             description: 'Fitness App with step counter, extensive exercise video library, and personalized diet plans.',
-            tech: ['Pedometer', 'Video Player', 'Flutter-Riverpod'],
+            tech: ['Pedometer Steps Tracker', 'Video Player', 'Riverpod'],
         },
     ];
 

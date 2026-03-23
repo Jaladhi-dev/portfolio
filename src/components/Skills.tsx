@@ -1,3 +1,4 @@
+import { trackEvent } from '../utils/analytics';
 
 const Skills = () => {
     const skillCategories = [
@@ -80,7 +81,11 @@ const Skills = () => {
                         <h3 className="category-title">{category.title}</h3>
                         <div className="skills-grid">
                             {category.skills.map((skill, skillIndex) => (
-                                <span className="skill-tag" key={skillIndex}>
+                                <span
+                                    className="skill-tag"
+                                    key={skillIndex}
+                                    onClick={() => trackEvent({ action: 'click_skill', category: 'Engagement', label: skill.name })}
+                                >
                                     {skill.icon && <i className={skill.icon}></i>} {skill.name}
                                 </span>
                             ))}

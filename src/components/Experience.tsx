@@ -1,4 +1,5 @@
 
+import { trackEvent } from '../utils/analytics';
 
 const Experience = () => {
     const experiences = [
@@ -31,7 +32,11 @@ const Experience = () => {
                 <h2 className="section-title fade-in visible">Professional Experience</h2>
                 <div className="timeline">
                     {experiences.map((exp, index) => (
-                        <div className="timeline-item fade-in visible" key={index}>
+                        <div
+                            className="timeline-item fade-in visible"
+                            key={index}
+                            onClick={() => trackEvent({ action: 'click_experience', category: 'Engagement', label: exp.company })}
+                        >
                             <div className="timeline-marker"></div>
                             <div className="timeline-content">
                                 <div className="timeline-header">

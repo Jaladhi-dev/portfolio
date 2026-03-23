@@ -1,5 +1,7 @@
 
 
+import { trackEvent } from '../utils/analytics';
+
 const Education = () => {
     const education = [
         {
@@ -24,7 +26,15 @@ const Education = () => {
                 <h2 className="section-title fade-in visible">Education</h2>
                 <div className="education-grid">
                     {education.map((edu, index) => (
-                        <div className="education-card fade-in visible" key={index}>
+                        <div
+                            className="education-card fade-in visible"
+                            key={index}
+                            onClick={() => trackEvent({
+                                action: 'click_education',
+                                category: 'Engagement',
+                                label: edu.degree
+                            })}
+                        >
                             <div className="education-icon">{edu.icon}</div>
                             <h3 className="education-degree">{edu.degree}</h3>
                             <p className="education-institution">{edu.institution}</p>

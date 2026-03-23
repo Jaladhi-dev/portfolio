@@ -1,5 +1,6 @@
 import React from 'react';
 import heroAvatar from '../assets/images/hero-avatar.png';
+import { trackEvent } from '../utils/analytics';
 
 interface FloatingBadgeProps {
     className: string;
@@ -35,8 +36,16 @@ const Hero = () => {
                         </p>
 
                         <div className="hero-cta">
-                            <a href="#projects" className="btn btn-primary">View Work</a>
-                            <a href="#contact" className="btn btn-secondary">Contact Me</a>
+                            <a
+                                href="#projects"
+                                className="btn btn-primary"
+                                onClick={() => trackEvent({ action: 'click_view_work', category: 'Hero', label: 'View Work Button' })}
+                            >View Work</a>
+                            <a
+                                href="#contact"
+                                className="btn btn-secondary"
+                                onClick={() => trackEvent({ action: 'click_contact_me', category: 'Hero', label: 'Contact Me Button' })}
+                            >Contact Me</a>
                         </div>
                     </div>
 

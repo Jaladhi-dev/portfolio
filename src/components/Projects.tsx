@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             ref={cardRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            onClick={() => trackEvent({ action: 'click_project_card', category: 'Projects', label: project.title })}
+            onClick={() => trackEvent({ action: 'Project Card Clicked', category: 'Projects Section', label: project.title })}
         >
             <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
@@ -53,7 +53,7 @@ const ProjectCard = ({ project }: { project: any }) => {
                         key={i}
                         onClick={(e) => {
                             e.stopPropagation(); // Prevent card click event from firing too
-                            trackEvent({ action: 'click_project_link', category: 'Projects', label: `${project.title} - ${link.label}` })
+                            trackEvent({ action: 'Project Link Clicked', category: 'Projects Section', label: `${project.title} - ${link.label}` })
                         }}
                     >
                         {link.icon === 'apple' ? (

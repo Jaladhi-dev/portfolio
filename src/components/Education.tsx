@@ -30,8 +30,8 @@ const Education = () => {
                             className="education-card fade-in visible"
                             key={index}
                             onClick={() => trackEvent({
-                                action: 'click_education',
-                                category: 'Engagement',
+                                action: 'Education Clicked',
+                                category: 'Education Section',
                                 label: edu.degree
                             })}
                         >

@@ -35,7 +35,7 @@ const Experience = () => {
                         <div
                             className="timeline-item fade-in visible"
                             key={index}
-                            onClick={() => trackEvent({ action: 'click_experience', category: 'Engagement', label: exp.company })}
+                            onClick={() => trackEvent({ action: 'Experience Clicked', category: 'Experience Section', label: exp.company })}
                         >
                             <div className="timeline-marker"></div>
                             <div className="timeline-content">

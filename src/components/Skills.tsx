@@ -84,7 +84,7 @@ const Skills = () => {
                                 <span
                                     className="skill-tag"
                                     key={skillIndex}
-                                    onClick={() => trackEvent({ action: 'click_skill', category: 'Engagement', label: skill.name })}
+                                    onClick={() => trackEvent({ action: 'Skill Clicked', category: 'Skills Section', label: skill.name })}
                                 >
                                     {skill.icon && <i className={skill.icon}></i>} {skill.name}
                                 </span>

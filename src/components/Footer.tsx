@@ -13,19 +13,19 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener"
                             aria-label="GitHub"
-                            onClick={() => trackEvent({ action: 'click_footer_github', category: 'Footer', label: 'GitHub' })}
+                            onClick={() => trackEvent({ action: 'GitHub Clicked', category: 'Footer Section', label: 'GitHub' })}
                         >GitHub</a>
                         <a
                             href="https://www.linkedin.com/in/jd-patel"
                             target="_blank"
                             rel="noopener"
                             aria-label="LinkedIn"
-                            onClick={() => trackEvent({ action: 'click_footer_linkedin', category: 'Footer', label: 'LinkedIn' })}
+                            onClick={() => trackEvent({ action: 'LinkedIn Clicked', category: 'Footer Section', label: 'LinkedIn' })}
                         >LinkedIn</a>
                         <a
                             href="mailto:jaladhi.dev@gmail.com"
                             aria-label="Email"
-                            onClick={() => trackEvent({ action: 'click_footer_email', category: 'Footer', label: 'Email' })}
+                            onClick={() => trackEvent({ action: 'Email Clicked', category: 'Footer Section', label: 'Email' })}
                         >Email</a>
                     </div>
                 </div>

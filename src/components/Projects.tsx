@@ -76,6 +76,16 @@ const ProjectCard = ({ project }: { project: any }) => {
 const Projects = () => {
     const projects = [
         {
+            title: 'Behtar Broker by Hero Housing',
+            badge: 'Live',
+            description: 'Worked on structuring the codebase using clean architecture and proper package separation to keep the project scalable and easy to maintain.',
+            tech: ['Provider', 'ChatBot', 'Custom Packages'],
+            links: [
+                { label: 'App Store', url: 'https://apps.apple.com/in/app/behtar-broker/id6746721826', icon: 'apple' },
+                { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=ai.engagely.hero&hl=en', icon: 'play' },
+            ],
+        },
+        {
             title: 'Superbrains',
             badge: 'Live',
             description: 'Worked on Superbrains, a mental fitness and brain training app. Responsible for developing new features such as audio/video calling and Google Fit & Apple Health Connect integration.',

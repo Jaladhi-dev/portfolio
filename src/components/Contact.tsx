@@ -8,7 +8,7 @@ const Contact = () => {
             <div className="container">
                 <h2 className="section-title fade-in visible">Let's Connect</h2>
                 <p className="contact-intro fade-in visible">
-                    I'm currently open to new opportunities. Whether you have a question or just want to say hi,
+                    Open for new opportunity and ready for immediate start. Whether you have a question or just want to say hi,
                     I'll try my best to get back to you!
                 </p>
                 <div className="contact-info fade-in visible">
@@ -22,6 +22,16 @@ const Contact = () => {
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
                         <span>jaladhi.dev@gmail.com</span>
+                    </a>
+                    <a
+                        href="tel:+918238790859"
+                        className="contact-item"
+                        onClick={() => trackEvent({ action: 'Phone Clicked', category: 'Contact Section', label: 'Phone Icon' })}
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span>+91 8238790859</span>
                     </a>
                     <a
                         href="https://github.com/Jaladhi-dev/"

@@ -39,12 +39,12 @@ const Hero = () => {
                             <a
                                 href="#projects"
                                 className="btn btn-primary"
-                                onClick={() => trackEvent({ action: 'View Work Clicked', category: 'Hero Section', label: 'View Work Button' })}
+                                onClick={() => trackEvent({ action: 'click_hero_view_work', category: 'Hero Section', label: 'View Work Button' })}
                             >View Work</a>
                             <a
                                 href="#contact"
                                 className="btn btn-secondary"
-                                onClick={() => trackEvent({ action: 'Contact Me Clicked', category: 'Hero Section', label: 'Contact Me Button' })}
+                                onClick={() => trackEvent({ action: 'click_hero_contact_me', category: 'Hero Section', label: 'Contact Me Button' })}
                             >Contact Me</a>
                         </div>
                     </div>

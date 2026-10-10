@@ -14,14 +14,14 @@ const Experience = () => {
             title: 'Mobile Developer',
             company: 'EngagelyAI',
             period: 'October 2025 – April 2026',
-            location: 'Mumbai, Maharashtra',
+            location: 'Mumbai, Maharashtra, Remote',
             description: 'Worked as a Flutter Developer building enterprise mobile applications and conversational AI interfaces, including the Behtar Broker application with chatbot capabilities, clean architecture, and modular package integrations.',
         },
         {
             title: 'Flutter Developer',
             company: 'Paiteq Private Limited',
             period: 'April 2024 – April 2025',
-            location: 'Bangalore, Karnataka',
+            location: 'Bangalore, Karnataka, Remote',
             description: 'Maintained and enhanced mobile applications by fixing bugs, improving performance, and adding new features. Collaborated with product and design teams to ensure smooth, up-to-date, and user-friendly experiences.',
         },
         {

@@ -29,10 +29,9 @@ const Hero = () => {
                     <div className="hero-text">
                         <p className="hero-greeting">Hello, I'm</p>
                         <h1 className="hero-name">Jaladhi Patel</h1>
-                        <h2 className="hero-title">Flutter Developer</h2>
+                        <h2 className="hero-title">Mobile Application Developer</h2>
                         <p className="hero-description">
-                            5+ years of experience in designing, developing, and maintaining mobile applications. Skilled in
-                            writing clean, efficient code and delivering seamless user experiences.
+                            Specializing in high-performance Flutter apps for Android and iOS with 5+ years of hands-on experience. Currently leading the mobile team, managing end-to-end store releases, and leveraging AI coding workflows to build reliable, polished products.
                         </p>
 
                         <div className="hero-cta">
@@ -63,6 +62,7 @@ const Hero = () => {
                             <FloatingBadge className="badge-3" icon="devicon-android-plain colored" text="Android" />
                             <FloatingBadge className="badge-4" icon="devicon-apple-original colored" text="iOS" />
                             <FloatingBadge className="badge-5" emoji="📱" text="Mobile Dev" />
+                            <FloatingBadge className="badge-6" emoji="✨" text="AI-Driven Dev" />
                         </div>
                     </div>
                 </div>

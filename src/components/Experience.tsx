@@ -4,11 +4,18 @@ import { trackEvent } from '../utils/analytics';
 const Experience = () => {
     const experiences = [
         {
+            title: 'Team Lead – Mobile Developer',
+            company: 'Witness Manera',
+            period: 'August 2026 – Present',
+            location: 'Mumbai, Maharashtra, Remote',
+            description: 'Leading the mobile engineering team in architecting and building Zency, a hyperlocal quick-commerce platform delivering fashion, lifestyle, beauty, and home essentials in 15 minutes. Driving core application development with Flutter and BLoC state management. Managing end-to-end mobile build pipelines and deployment lifecycles across Google Play Console (Android) and Apple App Store Connect (iOS). Implementing AI-accelerated engineering workflows to optimize code quality, streamline testing, and maximize sprint delivery velocity.',
+        },
+        {
             title: 'Mobile Developer',
             company: 'EngagelyAI',
-            period: 'October 2025 – Present',
+            period: 'October 2025 – April 2026',
             location: 'Mumbai, Maharashtra',
-            description: 'Working as a Flutter Developer, focusing on building and improving mobile app solutions while staying updated with the latest Flutter advancements.',
+            description: 'Worked as a Flutter Developer building enterprise mobile applications and conversational AI interfaces, including the Behtar Broker application with chatbot capabilities, clean architecture, and modular package integrations.',
         },
         {
             title: 'Flutter Developer',

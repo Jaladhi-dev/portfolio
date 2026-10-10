@@ -54,15 +54,12 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-text fade-in visible">
                         <p className="about-intro">
-                            Mobile Application Developer with <strong>5+ years of experience</strong> in Flutter,
-                            specializing in building scalable, high-quality applications with clean architecture and
-                            seamless user experiences.
+                            Mobile Application Team Lead & Senior Flutter Developer with <strong>5+ years of experience</strong>,
+                            specializing in engineering scalable, high-performance cross-platform applications with reactive state
+                            management and seamless user experiences.
                         </p>
                         <p className="about-description">
-                            Skilled in integrating codebases and optimizing app performance.
-                            Proficient in Firebase integration, API development, and cross-platform development.
-                            I enjoy staying current with emerging technologies and collaborating with product and design
-                            teams to deliver impactful digital solutions.
+                            Experienced in taking mobile products from inception to store launch, managing complete <strong>Android (Google Play Console) and iOS (App Store Connect / TestFlight) deployment cycles</strong>, and building robust architectures using <strong>BLoC</strong> and Riverpod. Actively leverage <strong>AI-accelerated engineering practices</strong> to elevate code quality, automate repetitive workflows, and accelerate product delivery.
                         </p>
                         <div className="about-highlights">
                             <div className="highlight-item">

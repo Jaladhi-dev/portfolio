@@ -758,6 +758,12 @@ a:hover {
   animation: floatBadge5 6s ease-in-out infinite 0.5s;
 }
 
+.badge-6 {
+  top: 0%;
+  left: 5%;
+  animation: floatBadge3 6.5s ease-in-out infinite 1s;
+}
+
 @keyframes floatBadge1 {
 
   0%,
@@ -951,6 +957,11 @@ a:hover {
   .badge-5 {
     top: 18%;
     left: -12%;
+  }
+
+  .badge-6 {
+    top: -2%;
+    left: 2%;
   }
 
   /* Reduce background shapes for mobile */
@@ -1970,6 +1981,11 @@ a:hover {
     top: 28%;
     left: -12%;
   }
+
+  .badge-6 {
+    top: 2%;
+    left: 2%;
+  }
 }
 
 /* Tablet Portrait Mode (768px - 1024px) */
@@ -2064,6 +2080,11 @@ a:hover {
   .badge-5 {
     top: 22%;
     left: -10%;
+  }
+
+  .badge-6 {
+    top: 0%;
+    left: 2%;
   }
 }
 

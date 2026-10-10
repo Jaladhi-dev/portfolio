@@ -27,7 +27,6 @@ const Skills = () => {
                 { name: 'TestFlight' },
                 { name: 'Internal/Closed Testing Tracks' },
                 { name: 'Versioning & Release Management' },
-                { name: 'Mobile CI/CD Pipelines' },
             ],
         },
         {

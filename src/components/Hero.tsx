@@ -1,5 +1,6 @@
 import React from 'react';
-import heroAvatar from '../assets/images/hero-avatar.png';
+import heroAvatarDark from '../assets/images/hero-avatar-dark.png';
+import heroAvatarLight from '../assets/images/hero-avatar-light.png';
 import { trackEvent } from '../utils/analytics';
 
 interface FloatingBadgeProps {
@@ -55,7 +56,10 @@ const Hero = () => {
                                 <div className="fog fog-2"></div>
                                 <div className="fog fog-3"></div>
                             </div>
-                            <img src={heroAvatar} alt="Jaladhi Patel 3D Avatar" className="hero-avatar" />
+                            <div className="hero-avatar-wrapper">
+                                <img src={heroAvatarDark} alt="Jaladhi Patel Avatar" className="hero-avatar hero-avatar-dark" />
+                                <img src={heroAvatarLight} alt="Jaladhi Patel Avatar" className="hero-avatar hero-avatar-light" />
+                            </div>
 
                             <FloatingBadge className="badge-1" icon="devicon-flutter-plain colored" text="Flutter" />
                             <FloatingBadge className="badge-2" emoji="⚡" text="5+ Years" />

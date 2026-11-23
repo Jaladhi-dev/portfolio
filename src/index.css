@@ -4,6 +4,24 @@
    =============================================== */
 
 /* CSS Variables - Design System with Theme Support */
+@property --fog-color-1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(0, 212, 255, 0.4);
+}
+
+@property --fog-color-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(88, 101, 242, 0.3);
+}
+
+@property --fog-color-3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(255, 255, 255, 0.2);
+}
+
 :root {
   /* Dark Theme Colors (Default) */
   --bg-primary: #000000;
@@ -596,16 +614,47 @@ a:hover {
   /* Allow badges to float outside but hero will clip */
 }
 
+.hero-avatar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: avatarFloat 6s ease-in-out infinite;
+  z-index: 3;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+  will-change: transform;
+}
+
 .hero-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(var(--avatar-shadow, 0 20px 40px rgba(0, 0, 0, 0.4)));
-  animation: avatarFloat 6s ease-in-out infinite;
-  z-index: 3;
-  position: relative;
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.hero-avatar-dark {
+  opacity: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+.hero-avatar-light {
+  opacity: 0;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
+}
+
+[data-theme="light"] .hero-avatar-dark {
+  opacity: 0;
+}
+
+[data-theme="light"] .hero-avatar-light {
+  opacity: 1;
 }
 
 /* Fog Effect Container */
